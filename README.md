@@ -8,20 +8,23 @@ permitindo que o usuário interaja de forma
 mais prática com os equipamentos de sua
 residência e/ou empresa.
 
-**Requisitos**
+**Requisitos de Instalação**
 ------------------
 Para que o sistema rode sem problemas no seu computador você deve criar um ambiente virtual por meio do virtualenv utilizando o seguinte comando no seu terminal: 
+
         - $ virtualenv Nome_Do_Ambiente 
 
 Dessa forma todos os arquivos irão ser executados de forma correta.
 É aconselhável você criar uma pasta primeiro e dentro dela clonar o ambiente virtual.
 No termial, execute:
+
         - $ mkdir nomePasta
         - $ cd nomePasta/
         - nomePasta$ virtualenv Nome_Do_Ambiente
 
 Depois que o ambiente estiver criado dentro da sua pasta, você executará o comando que irá clonar este repositório para seu computador.
 Então, no seu terminal execute:
+
         - nomePasta$ git clone https://github.com/pbaesse/Sissen 
 
 Após esse processo, você deve incluir todas as bibliotecas que estão sendo utilizadas nesse projeto.
