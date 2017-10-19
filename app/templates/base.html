@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{url_for('static', filename='unnamed.png') }}">
+    <title> SISSENS - Sistema de Gerenciamento de Sensores </title>
+
+    <!-- Bootstrap core CSS -->
+   	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active">
+              <a href="{{ url_for('index')}}"> Home </a>
+            </li>
+            <li role="presentation">
+              <a href="{{ url_for('Login')}}">Login</a>
+            </li>
+            <li role="presentation">
+              <a href="#">Sobre</a>
+            </li>
+          </ul>
+        </nav>
+  <h3 class="text-muted"> SISSENS - Sistema de Gerenciamento de Sensores </h3>
+  {% block base %}
+  {% endblock %}
+    <center>
+      <footer class="footer">
+        <p>&copy; SISSENS Company 2017 </p>
+      </footer>
+      </center>
+      </div>
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"> </script>
+</body>
+</html>

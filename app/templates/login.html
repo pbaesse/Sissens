@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block base %}
+<div class="col-md-4 col-md-offset-4">
+<h1>Login</h1>
+<form action="" method="POST">
+	{{ form.csrf_token}}
+	<div class="form-group">
+		<label>Nome</label>
+		{{ form.nome(class="form-control", placholder="Digite seu Nome ou Email") }}
+	<div class="form-group">
+		<label>Senha</label>
+		{{ form.senha(class="form-control") }}
+	</div>
+	<div class="checkbox">
+		<label>
+		{{ form.lembre_me }} Lembre-me
+	</label>
+	</div>
+	<button type="submit" class="btn btn-default">Entrar</button>
+</form>
+</div>
+{%endblock%}
