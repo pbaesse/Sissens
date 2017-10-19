@@ -35,6 +35,12 @@ Novamente, no terminal, execute:
 	
 Pronto. O sistema deve estar rodando sem erros!
 
+** OBS **
+Utilizamos neste o projeto o Migrate, que serve como um gerenciador de comandos.
+Para executá-lo é nescessário utilizar o seguinte comando:
+	
+	-(Nome_Do_Ambiente):NomePasta$ python run.py runserver
+
 
 **Problemas conhecidos e possíveis melhorias**
 ------------------
