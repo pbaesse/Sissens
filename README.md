@@ -47,7 +47,7 @@ Caso você faça alguma modificação no Banco de dados é nescessário executar
 
 
 **Problemas conhecidos e possíveis melhorias**
-------------------
+----------------------------------------------
 
 - Corrigir a comunicação entre...
 - ajeitar o banco de dados.
