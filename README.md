@@ -40,6 +40,10 @@ Utilizamos neste o projeto o Migrate, que serve como um gerenciador de comandos.
 Para executá-lo é nescessário utilizar o seguinte comando:
 	
 	-(Nome_Do_Ambiente):NomePasta$ python run.py runserver
+Caso você faça alguma modificação no Banco de dados é nescessário executar os seguintes comandos:
+
+	-(Nome_Do_Ambiente):NomePasta$ python run.py upgrade
+	-(Nome_Do_Ambiente):NomePasta$ python run.py migrate 
 
 
 **Problemas conhecidos e possíveis melhorias**
