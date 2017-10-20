@@ -36,7 +36,7 @@ Novamente, no terminal, execute:
 Pronto. O sistema deve estar rodando sem erros!
 
 ** OBS **
-Utilizamos neste o projeto o Migrate, que serve como um gerenciador de comandos.
+Utilizamos neste o projeto a biblioteca Migrate, que serve como um gerenciador de comandos do Flask.
 Para executá-lo é nescessário utilizar o seguinte comando:
 	
 	-(Nome_Do_Ambiente):NomePasta$ python run.py runserver
