@@ -31,7 +31,7 @@ Após esse processo, você deve incluir todas as bibliotecas que estão sendo ut
 Novamente, no terminal, execute:
 
         - nomePasta$ cd Nome_Do_Ambiente/
-        - nomePasta/Nome_Do_Ambiente$ pip install -r Bibliotecas.txt
+        - nomePasta/Nome_Do_Ambiente$ pip install -r bibliosAtualizadas.txt
 	
 Pronto. O sistema deve estar rodando sem erros!
 
