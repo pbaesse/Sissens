@@ -10,6 +10,8 @@ residência e/ou empresa.
 
 **Requisitos de Instalação**
 ------------------
+abra o terminal e digite nele :
+
 	# criando e ativando abiente virtual
         - $ virtualenv Nome_Do_Ambiente 
         - $ mkdir nomePasta
