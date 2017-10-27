@@ -21,7 +21,7 @@ residência e/ou empresa.
         - $ nomePasta cd Nome_Do_Ambiente/
         - $ nomePasta/Nome_Do_Ambiente$ pip install -r bibliosAtualizadas.txt
 	
-	
+<br/><br/><br/>	
 
 ** OBS **
 Utilizamos neste o projeto a biblioteca Migrate, que serve como um gerenciador de comandos do Flask.
