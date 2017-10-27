@@ -60,8 +60,8 @@ residência e/ou empresa.
 ![teste](https://user-images.githubusercontent.com/19451652/30993633-3b64298c-a486-11e7-9c57-3bb67943e92e.jpg)
 <br />
  
-<a href="https://github.com/henriqueSpencer">Henrique Spencer</a>
-<a href="https://github.com/pbaesse">Pedro Baesse</a>                                                       
-<a href="https://github.com/JoaoPedroSantosAlves">João Pedro</a>                                                 
-<a href="https://github.com/jessicakaroline">Jéssica</a>
+<a href="https://github.com/henriqueSpencer">Henrique Spencer</a><br />
+<a href="https://github.com/pbaesse">Pedro Baesse</a><br />                                                       
+<a href="https://github.com/JoaoPedroSantosAlves">João Pedro</a> <br />                                               
+<a href="https://github.com/jessicakaroline">Jéssica</a> <br />
 ## [LICENSE](https://github.com/henriqueSpencer/Sissens/blob/master/LICENSE)
