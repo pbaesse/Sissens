@@ -62,6 +62,6 @@ residência e/ou empresa.
  
 <a href="https://github.com/henriqueSpencer">Henrique Spencer</a>
 <a href="https://github.com/pbaesse">Pedro Baesse</a>                                                       
-<a href="https://github.com/JoaoPedroSantosAlves">Joao Pedro</a>                                                 
-<a href="https://github.com/pbaesse">Jessica</a>
+<a href="https://github.com/JoaoPedroSantosAlves">João Pedro</a>                                                 
+<a href="https://github.com/jessicakaroline">Jéssica</a>
 ## [LICENSE](https://github.com/henriqueSpencer/Sissens/blob/master/LICENSE)
