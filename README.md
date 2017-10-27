@@ -10,37 +10,37 @@ residência e/ou empresa.
 
 **Requisitos de Instalação**
 ------------------
-Para que o sistema rode sem problemas no seu computador você deve criar um ambiente virtual por meio do virtualenv utilizando o seguinte comando no seu terminal: 
+	#Para que o sistema rode sem problemas no seu computador você deve criar um ambiente virtual por meio do virtualenv 	    utilizando 		#o seguinte comando no seu terminal: 
 
         - $ virtualenv Nome_Do_Ambiente 
 
-Dessa forma todos os arquivos irão ser executados de forma correta.
-É aconselhável você criar uma pasta primeiro e dentro dela clonar o ambiente virtual.
-No termial, execute:
+	#Dessa forma todos os arquivos irão ser executados de forma correta.
+	#É aconselhável você criar uma pasta primeiro e dentro dela clonar o ambiente virtual.
+	#No termial, execute:
 
         - $ mkdir nomePasta
         - $ cd nomePasta/
         - nomePasta$ virtualenv Nome_Do_Ambiente
 
-Depois que o ambiente estiver criado dentro da sua pasta, você executará o comando que irá clonar este repositório para seu computador.
-Então, no seu terminal execute:
+	#Depois que o ambiente estiver criado dentro da sua pasta, você executará o comando que irá clonar este repositório 	     para seu 	#computador.
+	#Então, no seu terminal execute:
 
         - nomePasta$ git clone https://github.com/pbaesse/Sissen 
 
-Após esse processo, você deve incluir todas as bibliotecas que estão sendo utilizadas nesse projeto.
-Novamente, no terminal, execute:
+	#Após esse processo, você deve incluir todas as bibliotecas que estão sendo utilizadas nesse projeto.
+	#Novamente, no terminal, execute:
 
         - nomePasta$ cd Nome_Do_Ambiente/
         - nomePasta/Nome_Do_Ambiente$ pip install -r bibliosAtualizadas.txt
 	
-Pronto. O sistema deve estar rodando sem erros!
+	#Pronto. O sistema deve estar rodando sem erros!
 
-** OBS **
-Utilizamos neste o projeto a biblioteca Migrate, que serve como um gerenciador de comandos do Flask.
-Para executá-lo é nescessário utilizar o seguinte comando:
+	#** OBS **
+	#Utilizamos neste o projeto a biblioteca Migrate, que serve como um gerenciador de comandos do Flask.
+	#Para executá-lo é nescessário utilizar o seguinte comando:
 	
-	-(Nome_Do_Ambiente):NomePasta$ python run.py runserver
-Caso você faça alguma modificação no Banco de dados é nescessário executar os seguintes comandos:
+	-(Nome_Do_Ambiente):NomePasta$ python run.py runserver	
+	#Caso você faça alguma modificação no Banco de dados é nescessário executar os seguintes comandos:
 
 	-(Nome_Do_Ambiente):NomePasta$ python run.py upgrade
 	-(Nome_Do_Ambiente):NomePasta$ python run.py migrate 
