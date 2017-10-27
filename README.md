@@ -2,15 +2,11 @@
 
 **Descrição**
 ------------------
-SisSens visa a automação de aparelhos
-eletrônicos, conectando-os à internet,
-permitindo que o usuário interaja de forma
-mais prática com os equipamentos de sua
-residência e/ou empresa.
+SisSens é um cliete mqtt criado em python com o framework flask, visando a automação de aparelhos eletrônicos, conectando-os à internet, permitindo que o usuário interaja de forma mais prática com os equipamentos de sua residência e/ou empresa.
 
 **Requisitos de Instalação**
 ------------------
-abra o terminal e digite nele :
+Abra o terminal e digite nele :
 
 	# criando e ativando abiente virtual
         - $ virtualenv Nome_Do_Ambiente 
