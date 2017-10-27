@@ -56,7 +56,8 @@ residência e/ou empresa.
 ## Equipe
 ![eu copy](https://user-images.githubusercontent.com/19451652/30993612-2d93c5f6-a486-11e7-93ad-282acad1fb00.jpg)
 ![20526039_10212897312323106_4317811075203347960_n](https://user-images.githubusercontent.com/19451652/30993628-3798af62-a486-11e7-9c8a-e7df340fd9a5.jpg)
-![image](https://user-images.githubusercontent.com/19451652/32110379-c815bdee-bb0d-11e7-9d4a-7e18c1011afd.png)
+
+![image](https://user-images.githubusercontent.com/19451652/32110626-59cf2432-bb0e-11e7-859a-1938fbe62ff8.png)
 
 ![teste](https://user-images.githubusercontent.com/19451652/30993633-3b64298c-a486-11e7-9c57-3bb67943e92e.jpg)
 <br />Henrique spencer, Pedro baesse, João Pedro, Jessica
