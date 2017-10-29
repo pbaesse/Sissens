@@ -1,5 +1,7 @@
 
- <img src="https://user-images.githubusercontent.com/19451652/32145284-6ef08954-bca4-11e7-8a40-477851132390.png" align="middle"> 
+ <p align="center">
+ <img src="https://user-images.githubusercontent.com/19451652/32145284-6ef08954-bca4-11e7-8a40-477851132390.png">
+ <p/> 
 
 
 **Descrição**
