@@ -1,6 +1,6 @@
-<p align="center"><img width=12.5% src="https:https://user-images.githubusercontent.com/19451652/32145284-6ef08954-bca4-11e7-8a40-477851132390.png"></p>
-<p align="center"><img width=60% src="https://github.com/anfederico/Clairvoyant/blob/master/media/Clairvoyant.png"></p>
-# SISSENS - SISTEMA DE GERENCIAMENTO DE SENSORES 
+
+ <img src="https://user-images.githubusercontent.com/19451652/32145284-6ef08954-bca4-11e7-8a40-477851132390.png" align="middle"> 
+
 
 **Descrição**
 ------------------
