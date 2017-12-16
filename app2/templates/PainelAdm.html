@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+</script>
+  </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title> SISSENS - Sistema de Gerenciamento de Sensores</title>
+
+    <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{{url_for('static', filename='carousel.css')}}">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"> Sissens - Sistema de Gerenciamento de Sensores</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="{{url_for('painelAdm')}}">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="{{url_for("logout")}}"><img src="{{url_for('static', filename='glyphicons-64-power.png')}}"> Sair</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+     <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+          <form action="{{ url_for('Register')}}" method="POST">
+  <div class="form-group">
+    <label> Nome </label>
+    <input type="text" name="nome">
+  </div>
+  <div class="form-group">
+  <label> Perfil</label>
+  <input type="radio" name="perfil" value="Adm">Adm
+  <input type="radio" name="perfil" value="Usuario">Usuario
+  </div>
+  <div class="form-group">
+  <label> Senha</label>
+  <input type="password" name="senha">
+  </div>
+  <div class="form-group">
+  <label>E-mail</label>
+  <input type="text" name="email">
+  </div>
+  <input type="submit" value="Cadastrar">
+  </form> 
+  </div>       
+ </div>
+</div>
+</div>
+
+<!-- Modal - Cadastrar Novo Usuário -->
+      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+          
+  </div>       
+ </div>
+</div>
+</div>
+
+<!-- Modal - Cadastrar Novo Tipo de Dispositivo -->
+      <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+     <form action="{{ url_for('RegisterTipoDpt')}}" method="POST">
+  <div class="form-group">
+    <label> Nome do Tipo do Dpt </label>
+    <input type="text" name="nomeTdp">
+  </div>
+  
+  <div class="form-group">
+  <label> Descrição</label>
+  <textarea placeholder="Decrição do Tipo do Dispositivo" name="descricao">
+  </textarea>
+  </div>
+  
+  <div class="form-group">
+  <label> Topicos </label>
+  <input type="text" name="topicos">
+  </div>
+
+  <input type="submit" value="Cadastrar novo Tipo de Dispositivo">
+  </form>
+  </div>       
+ </div>
+</div>
+</div>
+
+<!-- Modal - Cadastrar Novo Dispositivo -->
+      <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+     <form action="{{ url_for('RegisterDpt')}}" method="POST">
+  <div class="form-group">
+    <label> Nome do Dispositivo </label>
+    <input type="text" name="nomeDpt">
+  </div>
+  
+  <div class="form-group">
+  <label> Tipo de Dispositivo</label><br/>
+  {% for dispositivos in tipoDpt  %}
+  <input type="radio" name="tipoDptId" value="{{dispositivos.Tipo_Dpt_id}}">{{dispositivos.nome_Tipo_Dpt}}<br/>
+  {% endfor %}
+  </div>
+  
+  <div class="form-group">
+  <label> Url da Foto doo Dispositivo</label>
+  <input type="text" name="UrlFoto">
+  </div>
+
+  <input type="submit" value="Cadastrar Novo Dispositivo">
+  </form>
+  </div>       
+ </div>
+</div>
+</div>
+
+    <center>
+      <img class="img-circle" src="{{url_for('static', filename='SisSens.png')}}" alt="Generic placeholder image" width="300" height="300" style="margin-top: 100px">
+    </center>
+    <div>
+
+   {% block content %}
+    
+   {% endblock %}
+
+
+    <center> <h2 class="sub-header" style="margin-top: 2%">Administradores e Usuários Cadastrados</h2> </center>
+    <a data-toggle="modal" data-target="#myModal" href=""> <img src="{{url_for('static', filename='glyphicons-7-user-add.png')}}" style="margin-left: 1250px" title="Adicionar novo Usuário"> </a>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Nome</th>
+                  <th>Perfil</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for usuario in usuarios %}
+                <tr>
+                  <td>{{usuario.id_User}}</td>
+                  <td>{{usuario.nome}}</td>
+                  <td>{{usuario.perfil}}</td>
+                  <td>{{usuario.email}}</td>
+                  <td>
+                  <a href="/excluir/{{usuario.id_User}}"> <img src="{{url_for('static', filename='glyphicons-8-user-remove.png')}}" title="Remover este Usuário"> </a>
+                  </td>
+                  <td>
+                  <a href="/atualizar/{{usuario.id_User}}"> <img src="{{url_for('static', filename='glyphicons-31-pencil.png')}}" title="Atualizar este Usuário"> </a>
+                    
+                  </td>
+                </tr>
+              {% endfor %}
+              </tbody>
+  </table>
+  </div>
+  </div>
+  <div>
+   <center> 
+   <h2 class="sub-header" style="margin-top: 2%">Tipos de Dispositivos Cadastrados</h2> 
+   </center>
+     <a data-toggle="modal" data-target="#myModal3" href=""> <img src="{{url_for('static', filename='glyphicons-7-user-add.png')}}" style="margin-left: 1250px" title="Adicionar novo Tipo de Dispositivo"> </a>
+    <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Nome do Tipo De Dispositivo</th>
+                  <th>Descricao</th>
+                  <th>Topicos</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for tipoDpts in tipoDpt %}
+                <tr>
+                  <td>{{tipoDpts.Tipo_Dpt_id}}</td>
+                  <td>{{tipoDpts.nome_Tipo_Dpt}}</td>
+                  <td>{{tipoDpts.descricao}}</td>
+                  <td>{{tipoDpts.topicos}}</td>
+                  <td>
+                  <a href="/excluirTipoDpt/{{tipoDpts.Tipo_Dpt_id}}"> <img src="{{url_for('static', filename='glyphicons-8-user-remove.png')}}" title="Remover este Usuário"> </a>
+                  </td>
+                  <td>
+                  <a href="/atualizarTipoDpt/{{ tipoDpts.Tipo_Dpt_id }}"> <img src="{{url_for('static', filename='glyphicons-31-pencil.png')}}" title="Atualizar este Usuário"> </a>
+                    
+                  </td>
+                </tr>
+              {% endfor %}
+              </tbody>
+  </table>
+  </div>
+
+  <div>
+   <center> 
+   <h2 class="sub-header" style="margin-top: 2%"> Dispositivos Cadastrados</h2> 
+   </center>
+     <a data-toggle="modal" data-target="#myModal4" href="/RegisterDpt"> <img src="{{url_for('static', filename='glyphicons-7-user-add.png')}}" style="margin-left: 1250px" title="Adicionar novo Tipo de Dispositivo"> </a>
+    <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Nome</th>
+                  <th>Tipo de Dispositivo</th>
+                  <th>URL da Foto do Dispositivo</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for dispositivos in dispositivo %}
+                <tr>
+                  <td>{{dispositivos.id_Dpt}}</td>
+                  <td>{{dispositivos.nome_Dpt}}</td>
+                  <td>{{dispositivos.tipo_dpt_Id}}</td>
+                  <td>{{dispositivos.URL_Foto_Dpt}}</td>
+                  <td>
+                  <a href="/excluirDpt/{{dispositivos.id_Dpt}}"> <img src="{{url_for('static', filename='glyphicons-8-user-remove.png')}}" title="Remover este Usuário"> </a>
+                  </td>
+                  <td>
+                  <a href="/atualizarDpt/{{dispositivos.id_Dpt}}"> <img src="{{url_for('static', filename='glyphicons-31-pencil.png')}}" title="Atualizar este Dispositivo"> </a>
+                    
+                  </td>
+                </tr>
+              {% endfor %}
+              </tbody>
+  </table>
+  </div>
+
+  </div>
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer><span class="glyphicons glyphicons-user-add"></span>
+  </div>
+    </div><!-- /.container -->
+  </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"> </script>
+  </body>
+</html>
