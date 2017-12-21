@@ -21,7 +21,7 @@ Abra o terminal e digite nele :
         - $ nomePasta git clone https://github.com/pbaesse/Sissen 
 
         - $ nomePasta cd Nome_Do_Ambiente/
-        - $ nomePasta/Nome_Do_Ambiente$ pip install -r bibliosAtualizadas.txt
+        - $ nomePasta/Nome_Do_Ambiente$ pip install -r requirements.txt
 	
 <br/><br/><br/>	
 
