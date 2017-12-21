@@ -41,10 +41,12 @@ class Tipos_Dpts(db.Model):
 	Tipo_Dpt_id = db.Column(db.Integer, primary_key=True)
 	nome_Tipo_Dpt = db.Column(db.String(40))
 	descricao = db.Column(db.Text)
+	topicos = db.Column(db.String(60))
 
-	def __init__(self, dpt_Id, nome_Tipo_Dpt, descricao):
+	def __init__(self,nome_Tipo_Dpt, descricao, topicos):
 		self.nome_Tipo_Dpt = nome_Tipo_Dpt
 		self.descricao = descricao
+		self.topicos = topicos
 
 	def __repr__(self):
 		return "<Tipos_Dpt %r>" % self.Tipo_Dpt_id
@@ -60,7 +62,7 @@ class Dispositivos(db.Model):
 	dpt = db.relationship('Tipos_Dpts', foreign_keys=tipo_dpt_Id)
 
 	def __init__(self, tipo_dpt_Id, nome_Dpt, URL_Foto_Dpt):
-		self.id_Tipo_Dpt = id_Tipo_Dpt
+		self.tipo_dpt_Id = tipo_dpt_Id
 		self.nome_Dpt = nome_Dpt
 		self.URL_Foto_Dpt = URL_Foto_Dpt
 
@@ -74,6 +76,7 @@ class Dados_Dpt(db.Model):
 	id_Dados_Dpt = db.Column(db.Integer, primary_key=True)
 	status_Dpt = db.Column(db.Boolean)
 	nivel_Tensao = db.Column(db.Float)
+	
 
 	def __init__(self, status_Dpt,nivel_Tensao):
 		self.status_Dpt = status_Dpt
