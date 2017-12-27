@@ -1,6 +1,6 @@
 from app import app, db, lm
 from flask import render_template, request, redirect, url_for
-from flask_login import login_user, logout_user
+from flask_login import login_user, logout_user, current_user, login_required
 from app.models.forms import LoginForm
 from app.models.Sissens_DB import Usuario, Tipos_Dpts, Dispositivos
 
@@ -183,6 +183,7 @@ def atualizarDpt(id):
 	return render_template("atualizarDpt.html", dpts=dpts, usuarios=usuarios, tipoDpt=tipoDpt, dispositivo=dispositivo)
 
 @app.route("/painelAdm")
+@login_required
 def painelAdm():
 	usuarios = Usuario.query.all()
 	tipoDpt = Tipos_Dpts.query.all()
@@ -190,8 +191,9 @@ def painelAdm():
 	return render_template('PainelAdm.html', usuarios=usuarios, tipoDpt=tipoDpt, dispositivo=dispositivo)
 
 @app.route("/painelUsu")
+@login_required
 def painelUsu():
-	return render_template("PainelUsu.html")
+		return render_template("PainelUsu.html")
 
 
 
