@@ -17,10 +17,9 @@
   </head>
 <!-- NAVBAR
 ================================================== -->
-  <body>
-  <hr style="color: white">
-    <div class="navbar-wrapper" style="margin-left: 15em; margin-top: 4em">
-      <div class="container">
+  <body style="background: rgb(47,79,79); color: black">
+    <div class="navbar-wrapper" style="margin-left: 17em; margin-top: 4em">
+      <div class="container" style="width: 75em">
 
         <nav class="navbar navbar-inverse navbar-static-top">
           <div class="container">
@@ -48,16 +47,16 @@
         </nav>
       </div>
     </div>
-    <div class="col-xs-6 col-sm-3 placeholder">
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive img-circle" alt="Generic placeholder thumbnail">
+    <div class="col-xs-6 col-sm-3 placeholder" style="background: black; color: white; width: 230px; margin-top: -11.97em">
+        <img  src="https://icon-icons.com/icons2/67/PNG/512/user_13230.png" width="200" height="200" class="img-responsive img-circle" alt="Generic placeholder thumbnail" style="background: white"> </a>
         {% if current_user.is_authenticated %}
           <p> </p>
           <h4> Bem vindo, {{ current_user.nome }}!</h4>
           <span class="text-muted"> {{ current_user.email}}</span>
         {% endif %}
     </div>
-    <div class="container-fluid" style="margin-top: 20em; margin-right: 4em">
-      <div class="row">
+    <div class="container-fluid" style="margin-top: 12em; margin-right: 80em; background: black; width: 230px">
+      <div class="row" style="width: 750px; margin-top: 7em">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
@@ -181,7 +180,7 @@
 </div>
 
 
-    <div style="width: 72em; margin-left: 20em; margin-top: -40em">
+    <div style="width: 72em; margin-left: 20em; margin-top: -54em">
 
     <div> 
 
@@ -292,10 +291,9 @@
   </div>
 
   </div>
-    <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer><span class="glyphicons glyphicons-user-add"></span>
+    <footer style="margin-top: 60px; margin-bottom: 0px">
+        <center> <p>&copy; 2017 Equipe Sissens - Henrique Spencer, Jéssica Karoline e João Pedro </p> </center>
+      </footer>
   </div>
     </div><!-- /.container -->
 
