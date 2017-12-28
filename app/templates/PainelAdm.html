@@ -59,8 +59,8 @@
       <div class="row" style="width: 750px; margin-top: 7em">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Reports</a></li>
+            <li class="active"><a href="#">Perfil<span class="sr-only">(current)</span></a></li>
+            <li><a href="/todosDisposi">Todos os Dispositivos</a></li>
             <li><a href="#">Analytics</a></li>
             <li><a href="#">Export</a></li>
           </ul>
@@ -108,6 +108,8 @@
  </div>
 </div>
 </div>
+
+
 
 <!-- Modal - Cadastrar Novo Usuário -->
       <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -179,7 +181,6 @@
 </div>
 </div>
 
-
     <div style="width: 72em; margin-left: 20em; margin-top: -54em">
 
     <div> 
@@ -188,7 +189,12 @@
     
    {% endblock %}
 
-    <center> <h2 class="sub-header" style="margin-top: 2%">Administradores e Usuários Cadastrados</h2> </center>
+     <div style="margin-left: 20px">
+   {% block especial %}
+   {% endblock %}
+   </div>
+
+    <center> <h2>Administradores e Usuários Cadastrados</h2> </center>
     <a data-toggle="modal" data-target="#myModal" href=""> <img src="{{url_for('static', filename='glyphicons-7-user-add.png')}}" style="margin-left: 68em" title="Adicionar novo Usuário"> </a>
           <div class="table-responsive">
             <table class="table table-striped">
@@ -289,9 +295,8 @@
               </tbody>
   </table>
   </div>
-
   </div>
-    <footer style="margin-top: 60px; margin-bottom: 0px">
+    <footer style="margin-top: 20em">
         <center> <p>&copy; 2017 Equipe Sissens - Henrique Spencer, Jéssica Karoline e João Pedro </p> </center>
       </footer>
   </div>

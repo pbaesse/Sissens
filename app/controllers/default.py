@@ -196,8 +196,17 @@ def painelUsu():
 		return render_template("PainelUsu.html")
 
 
+@app.route("/todosDisposi")
+def tdsDisposi():
+	dispositivo = Dispositivos.query.all()
+	usuarios = Usuario.query.all()
+	tipoDpt = Tipos_Dpts.query.all()
+	return render_template("tdsDisposi.html", dispositivo=dispositivo, usuarios=usuarios, tipoDpt=tipoDpt)
 
-
+@app.route("/detalhes/<int:id>", methods=['GET', 'POST'])
+def detalhes(id):
+	dpts = Dispositivos.query.filter_by(id_Dpt=id).first()
+	return render_template("detalhesDpt.html", dpts=dpts)
 
 
 

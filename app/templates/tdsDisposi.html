@@ -1,0 +1,16 @@
+{% extends 'PainelAdm.html' %}
+{% block especial %}
+<center><h1 style="margin-top: -10em">Todos os Dispositivos cadastrados</h1></center>
+<div style="width: 70em; height: 50em">
+{% for dispositivos in dispositivo %}
+<div class="col-xs-6 col-sm-3 placeholder">
+	<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+        <h4>{{dispositivos.nome_Dpt}}</h4>
+            <span class="text-muted">{{dispositivos.id_Dpt}}</span>
+
+            <p><a class="btn btn-primary" href="/detalhes/{{dispositivos.id_Dpt}}" role="button">View details &raquo;</a></p>
+
+</div>
+{% endfor %}
+</div>
+{% endblock %}
