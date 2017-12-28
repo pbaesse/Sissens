@@ -52,7 +52,7 @@
         {% if current_user.is_authenticated %}
           <p> </p>
           <h4> Bem vindo, {{ current_user.nome }}!</h4>
-          <span class="text-muted"> {{ current_user.email}}</span>
+          <span class="text-muted"> {{ current_user.email}}, </span> <span class="text-muted"> {{ current_user.perfil}}</span>
         {% endif %}
     </div>
     <div class="container-fluid" style="margin-top: 12em; margin-right: 80em; background: black; width: 230px">

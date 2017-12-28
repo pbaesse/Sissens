@@ -15,7 +15,7 @@
   </head>
 <!-- NAVBAR
 ================================================== -->
-  <body>
+  <body style="background: rgb(47,79,79); color: black">
     <div class="navbar-wrapper" style="margin-left: 17em; margin-top: 4em">
       <div class="container" style="width: 75em">
 
@@ -43,14 +43,23 @@
             </div>
           </div>
         </nav>
+
       </div>
+      <h1> Dispositivos Favoritos</h1>
+      <div class="col-xs-6 col-sm-3 placeholder">
+
+      <img src="https://icon-icons.com/icons2/632/PNG/512/responsive-devices_icon-icons.com_58003.png" width="200" height="200" class="img-responsive" 
+      alt="Generic placeholder thumbnail" style="background: white">
+
+      </div>
+
     </div>
     <div class="col-xs-6 col-sm-3 placeholder" style="background: black; color: white; width: 230px; margin-top: -11.97em">
         <img  src="https://icon-icons.com/icons2/67/PNG/512/user_13230.png" width="200" height="200" class="img-responsive img-circle" alt="Generic placeholder thumbnail" style="background: white"> </a>
         {% if current_user.is_authenticated %}
           <p> </p>
           <h4> Bem vindo, {{ current_user.nome }}!</h4>
-          <span class="text-muted"> {{ current_user.email}}</span>
+          <span class="text-muted"> {{ current_user.email}}, </span> <span class="text-muted"> {{ current_user.perfil}}</span>
         {% endif %}
     </div>
     <div class="container-fluid" style="margin-top: 12em; margin-right: 80em; background: black; width: 230px">
