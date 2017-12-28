@@ -18,10 +18,8 @@
 <!-- NAVBAR
 ================================================== -->
   <body>
-  {% if current_user.is_authenticated %}
-  <p> <code> Bem vindo</code>, {{ current_user.nome }}!</p>
-{% endif %}
-    <div class="navbar-wrapper">
+  <hr style="color: white">
+    <div class="navbar-wrapper" style="margin-left: 15em; margin-top: 4em">
       <div class="container">
 
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -38,17 +36,9 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="{{url_for('painelAdm')}}">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
                     <li><a href="{{url_for("logout")}}"><img src="{{url_for('static', filename='glyphicons-64-power.png')}}"> Sair</a></li>
                   </ul>
                 </li>
@@ -58,6 +48,38 @@
         </nav>
       </div>
     </div>
+    <div class="col-xs-6 col-sm-3 placeholder">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive img-circle" alt="Generic placeholder thumbnail">
+        {% if current_user.is_authenticated %}
+          <p> </p>
+          <h4> Bem vindo, {{ current_user.nome }}!</h4>
+          <span class="text-muted"> {{ current_user.email}}</span>
+        {% endif %}
+    </div>
+    <div class="container-fluid" style="margin-top: 20em; margin-right: 4em">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">Nav item</a></li>
+            <li><a href="">Nav item again</a></li>
+            <li><a href="">One more nav</a></li>
+            <li><a href="">Another nav item</a></li>
+            <li><a href="">More navigation</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">Nav item again</a></li>
+            <li><a href="">One more nav</a></li>
+            <li><a href="">Another nav item</a></li>
+          </ul>
+        </div>
+        </div>
+        </div>
      <!-- Modal -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -158,19 +180,17 @@
 </div>
 </div>
 
-    <center>
-      <img class="img-circle" src="{{url_for('static', filename='SisSens.png')}}" alt="Generic placeholder image" width="300" height="300" style="margin-top: 100px">
-    </center>
-    <div>
+
+    <div style="width: 72em; margin-left: 20em; margin-top: -40em">
+
+    <div> 
 
    {% block content %}
     
    {% endblock %}
 
-  {% if current_user.is_authenticated %}
-
     <center> <h2 class="sub-header" style="margin-top: 2%">Administradores e Usuários Cadastrados</h2> </center>
-    <a data-toggle="modal" data-target="#myModal" href=""> <img src="{{url_for('static', filename='glyphicons-7-user-add.png')}}" style="margin-left: 1250px" title="Adicionar novo Usuário"> </a>
+    <a data-toggle="modal" data-target="#myModal" href=""> <img src="{{url_for('static', filename='glyphicons-7-user-add.png')}}" style="margin-left: 68em" title="Adicionar novo Usuário"> </a>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -205,7 +225,7 @@
    <center> 
    <h2 class="sub-header" style="margin-top: 2%">Tipos de Dispositivos Cadastrados</h2> 
    </center>
-     <a data-toggle="modal" data-target="#myModal3" href=""> <img src="{{url_for('static', filename='glyphicons-7-user-add.png')}}" style="margin-left: 1250px" title="Adicionar novo Tipo de Dispositivo"> </a>
+     <a data-toggle="modal" data-target="#myModal3" href=""> <img src="{{url_for('static', filename='glyphicons-7-user-add.png')}}" style="margin-left: 68em" title="Adicionar novo Tipo de Dispositivo"> </a>
     <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -240,7 +260,7 @@
    <center> 
    <h2 class="sub-header" style="margin-top: 2%"> Dispositivos Cadastrados</h2> 
    </center>
-     <a data-toggle="modal" data-target="#myModal4" href="/RegisterDpt"> <img src="{{url_for('static', filename='glyphicons-7-user-add.png')}}" style="margin-left: 1250px" title="Adicionar novo Tipo de Dispositivo"> </a>
+     <a data-toggle="modal" data-target="#myModal4" href="/RegisterDpt"> <img src="{{url_for('static', filename='glyphicons-7-user-add.png')}}" style="margin-left: 68em" title="Adicionar novo Tipo de Dispositivo"> </a>
     <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -272,15 +292,12 @@
   </div>
 
   </div>
-  {% endif %}
     <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
         <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer><span class="glyphicons glyphicons-user-add"></span>
-  }
   </div>
     </div><!-- /.container -->
-  </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
