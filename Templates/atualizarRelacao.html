@@ -1,0 +1,24 @@
+{% extends "basedashbord.html" %} 
+
+{% block title %}
+Início
+{% endblock %}
+
+
+{% block main_content %}
+<h2> Atualizar Relacao <code>{{relacao.name}}</code></h2>
+<hr>
+<div class="col-md-4 col-md-offset-4">
+      <form action="" method="POST">
+	<div class="form-group">
+		<label> Usuario </label>
+		<input type="text" name="usuario" value="{{relacao.usuario_id}}">
+	</div>
+	<div class="form-group">
+	<label> Dispositivo</label>
+	<input type="text" name="dispositivo" value="{{relacao.dispositivo_id}}">
+	</div>
+	<input type="submit" value="Atualizar Dispositivo">
+	</form>  
+  </div>       
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "basedashbord.html" %} 
+
+{% block title %}
+Início
+{% endblock %}
+
+
+{% block main_content %}
+<h2> Atualizar Usuário <code>{{usuario.nome}}</code></h2>
+<hr>
+<div class="col-md-4 col-md-offset-4">
+      <form action="" method="POST">
+	<div class="form-group">
+		<label> Nome </label>
+		<input type="text" name="nome" value="{{usuario.nome}}">
+	</div>
+	<div class="form-group">
+	<label> Perfil</label>
+	<input type="radio" name="perfil" value=1>Adm
+	</div>
+	<div class="form-group">
+	<label> Senha</label>
+	<input type="password" name="senha" value="{{usuario.senha}}">
+	</div>
+	<div class="form-group">
+	<label>email</label>
+	<input type="text" name="email" value="{{usuario.email}}">
+	</div>
+	<input type="submit" value="Atualizar">
+	</form>  
+  </div>       
+{% endblock %}

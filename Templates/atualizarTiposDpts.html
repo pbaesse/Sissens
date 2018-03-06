@@ -1,0 +1,28 @@
+{% extends "basedashbord.html" %} 
+
+{% block title %}
+Início
+{% endblock %}
+
+
+{% block main_content %}
+<h2> Atualizar Tipo de dispositivos <code>{{tipoDptss.name}}</code></h2>
+<hr>
+<div class="col-md-4 col-md-offset-4">
+      <form action="" method="POST">
+	<div class="form-group">
+		<label> Nome </label>
+		<input type="text" name="nome" value="{{tipoDptss.name}}">
+	</div>
+	<div class="form-group">
+	<label> Descricao</label>
+	<input type="text" name="descricao" value="{{tipoDptss.descricao}}">
+	</div>
+	<div class="form-group">
+	<label> Tipo de Dado</label>
+	<input type="text" name="tipo" value="{{tipoDptss.tipodeDado}}">
+	</div>
+	<input type="submit" value="Atualizar Dispositivo">
+	</form>  
+  </div>       
+{% endblock %}

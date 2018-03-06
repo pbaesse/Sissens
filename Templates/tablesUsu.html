@@ -1,0 +1,97 @@
+{% extends "basedashbord.html" %} 
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Início
+{% endblock %}
+
+
+{% block main_content %}
+<!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container">
+                <form class="form-signin" method="POST" action="/tablesUsu">
+                  {{ form.hidden_tag() }}
+                  {{ wtf.form_field(form.nome) }}
+                  {{ wtf.form_field(form.senha) }}
+                  {{ wtf.form_field(form.email) }}
+                  {{ wtf.form_field(form.perfil) }}
+                  <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit">Cadastrar</button>
+                  </span>
+                </form>
+  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     <!-- Modal -->
+      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container">
+                <form class="form-signin" method="POST" action="/tablesUsu">
+                  {{ form.hidden_tag() }}
+                  {{ wtf.form_field(form.nome) }}
+                  {{ wtf.form_field(form.senha) }}
+                  {{ wtf.form_field(form.email) }}
+                  {{ wtf.form_field(form.perfil) }}
+                  <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit">Cadastrar</button>
+                  </span>
+                </form>
+  </div>
+            </div></div></div></div>
+  
+
+          <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Data Table Example</div>
+        <div class="card-body">
+          <a data-toggle="modal" data-target="#myModal" href=""> Novo Cadastro </a>
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nome</th>
+                  <th>Senha</th>
+                  <th>Email</th>
+                  <th>Perfil</th>
+                </tr>
+              </thead>
+              <tfoot>
+              </tfoot>
+              <tbody>
+                {% for usuario in usuario %}
+                  <tr>
+                    <th>{{usuario.id}}</th>
+                    <th>{{usuario.nome}}</th>
+                    <th>{{usuario.senha}}</th>
+                    <th>{{usuario.email}}</th>
+                    <th>{{usuario.perfil}}</th>
+                    <th>
+                      <a href="/excluir/{{usuario.id}}"> Excluir </a>
+                    </th>
+                    <th>
+                      <a href="/atualizar/{{usuario.id}}">Atualizar </a>
+                    </th>
+                  </tr>
+
+                {% endfor %}
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+    </div>
+
+    <!-- /.container-fluid-->
+{%endblock%}

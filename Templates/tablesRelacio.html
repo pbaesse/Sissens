@@ -1,0 +1,71 @@
+{% extends "basedashbord.html" %} 
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Início
+{% endblock %}
+
+{% block main_content %}
+
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container">
+                <form class="form-signin" method="POST" action="/tablesRelacio">
+                  {{ form.hidden_tag() }}
+                  {{ wtf.form_field(form.usuario_id) }}
+                  {{ wtf.form_field(form.dispositivo_id) }}
+                  <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit">Cadastrar</button>
+                  </span>
+                </form>
+  </div>
+            </div></div></div></div>
+  
+
+
+  
+          <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Data Table Example</div>
+        <div class="card-body">
+          <a data-toggle="modal" data-target="#myModal" href=""> Novo Cadastro</a>
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>ID do usuario</th>
+                  <th>ID do dispositivo</th>
+                </tr>
+              </thead>
+              <tfoot>
+              </tfoot>
+              <tbody>
+                {% for relacao in relacao %}
+                  <tr>
+                    <th>{{relacao.id}}</th>
+                    <th>{{relacao.usuario_id}}</th>
+                    <th>{{relacao.dispositivo_id}}</th>
+                    <th>
+                    <a href="/excluirRelacao/{{relacao.id}}"> Excluir</a>
+                  </th>
+                  <th>
+                      <a href="/atualizarRelacao/{{relacao.id}}">Atualizar Relacao </a>
+                    </th>
+                  </tr>
+
+                {% endfor %}
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+    </div>
+
+  
+{%endblock%}
