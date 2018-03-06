@@ -1,0 +1,24 @@
+Metadata-Version: 2.0
+Name: Flask-MQTT
+Version: 0.0.10
+Summary: Flask extension for the MQTT protocol
+Home-page: https://github.com/MrLeeh/Flask-MQTT
+Author: Stefan Lehmann
+Author-email: stefan.st.lehmann@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: Flask
+Requires-Dist: typing
+Requires-Dist: paho-mqtt
+
+UNKNOWN
+
+
