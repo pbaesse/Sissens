@@ -14,13 +14,12 @@ SisSens é um cliete mqtt criado em python com o framework flask, visando a auto
         - $ git clone https://github.com/pbaesse/Sissen  
         - $ source bin/activate
         - $  pip install -r requirements.txt 
-   
-<br/><br/><br/>   
+  
    ## Como executar o progama
         - $ cd nomePasta
         - $ source bin/activat
         - $ python main.py
-<br/><br/><br/>   
+<br/>
 **Problemas conhecidos e possíveis melhorias** 
 ---------------------------------------------- 
  
